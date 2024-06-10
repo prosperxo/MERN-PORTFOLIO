@@ -1,0 +1,410 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+  @import "~react-image-gallery/styles/css/image-gallery.css";
+
+/*   ----- Variables  -----  */
+:root {
+    --dark-purple: #6E6273; /* Dark version of purple */
+    --medium-purple: #7b558b; /* Medium version of puple */
+    --light-purple: #BDA8BF; /* light version of purple */
+    --pastel-purple: #f0d5f5; /*pastel version of purple */
+    --light-yellow: #f8c565; /* Light version of yellow */
+    --light-orange: #F2AF88; /* light color - orange */
+    --medium-orange: #f3a87d; /* darker shade or orange */
+    --salmon:#f3c2a5; /* salmon color */
+    --light-blue: #52A8F2; /* Light blue color from favicon */
+    --accent-red: rgba(217, 129, 121, 0.15); /* Accent color - red with opacity */
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {}. */
+    background-color: var(--accent-red);
+    background-image: url("images/vung-tao-sunset.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 5% 5%;
+    padding: 0;
+    min-width:600px;
+    max-width:90%;
+    color: var(--dark-purple);
+    font-family: "Raleway", sans-serif; /* Define with at least one font name and its related generic family name.*/
+    font-size: 110%;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    background-color: var(--accent-red);
+    color: var(--dark-purple);
+    padding: 20px;
+    margin: 20px;
+    font-family: "Pacifico", sans-serif;
+    text-align: center;
+    border-radius: 30px;
+    border-style: double;
+  }
+
+  main {
+    background-color: var(--light-orange);
+    color: var(--dark-purple);
+    padding: 20px;
+    border-style: double;
+  }
+  section {}
+  article {}
+    #topic1 {}
+    #topic2 {}
+  div {}
+  aside {}
+  footer {
+    background-color: var(--medium-orange);
+    color: var(--dark-purple);
+    margin: 0px;
+    padding: 10px;
+    border-style: double; 
+  }
+
+  header img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #favicon-header {
+    height: 64px;
+    width: 64px;
+    font-family: "Pacifico", sans-serif;
+  }
+
+  footer p{
+    color: var(--dark-purple);
+    padding: 10px;
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  nav a {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 2px solid var(--dark-purple);
+    border-radius: 10px;
+    color: var(--medium-purple);
+    background-color: var(--light-purple);
+  }
+
+  nav a:hover {
+    background-color: var(--pastel-purple);
+    transition: all 0.5s ease-in-out 0s;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.6);
+  }
+
+  #global {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  #local {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-family: "Lato", sans-serif;
+  }
+
+  #global a {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 2px solid var(--dark-purple);
+    border-radius: 10px;
+    color: var(--medium-purple);
+    background-color: var(--accent-red);
+    mask-repeat : no-repeat;
+     mask-position : right bottom, left top, right top, left bottom;
+     mask-size : 70%  70% ;
+  }
+
+  #global a:hover {
+    transition: all 0.5s ease-in-out 0s;
+    background-position: 100% 0px;
+    box-shadow: rgb(255, 123, 97) 0px 4px 15px 0px;
+  }
+
+  .contact {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--light-orange); 
+    border: 2px solid var(--dark-purple);
+    border-radius: 10px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {font-family: 'Pacifico', sans-serif;} 
+  h1 {}
+  h2 {}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    padding: 5px;
+  }
+  caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--dark-purple);
+    padding: 10px;
+  }
+  thead {}
+  tbody {}
+  tfoot {}
+  tr {
+    background-color: var(--light-purple);
+  }
+    tr:nth-child(even) {}
+  th {
+    padding: 20px;
+    text-align: left;
+    background-color: var(--accent-red);
+    color: var(--dark-purple);
+    border: 2px solid var(--medium-purple);
+  }
+  td {
+    padding: 20pxpx;
+    border: 2px solid var(--medium-purple)
+  }
+    td:nth-child(1) {}
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form {}
+  fieldset {
+    border: 2px double var(--medium-purple);
+    margin-top: 1%;
+    padding: 20px;
+  }
+    legend {
+      color: var(--dark-purple);
+      font-size: 115%;
+      font-weight: bold;
+    }
+  label {
+    display: block;
+    margin-top: 2%;
+    padding-bottom: 20px;
+    font-family: "Raleway", sans-serif;
+  }
+  button, input, select, textarea {
+    font-size: 115%;
+    padding: 10px;
+    font-family: "Raleway", sans-serif;
+  }
+  button {
+    border-right: 3px solid var(--light-purple);
+    border-radius: 0px 3px 3px 0;
+    background-color: var(--light-orange);
+    color: var(--dark-purple);
+  }
+  button:hover {
+    color:var(--pastel-purple);
+    background-color: var(--medium-orange)
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+  }
+  textarea {
+      height: 180px;
+  }
+  select {
+    color: var(--dark-purple)
+  }
+    optgroup {}
+    option {}
+  textarea {}
+  output {}
+  meter {}
+  progress {}
+
+  :focus {
+    background-color:var(--pastel-purple)
+  }
+
+  *::placeholder {
+    color:var(--light-purple);
+    font-size: 120%;
+  }
+  label.required:after {
+    content: "*";
+    color:rgb(109, 255, 109);
+  }
+
+  
+  
+  /* ----- Media ----- */
+  figure {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid var(--dark-purple);
+    border-radius: 10px;
+    width: 600px;
+  }
+    figcaption {
+      padding: 10px;
+      margin-top: 10px;
+      color: var(--dark-purple);
+    }
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: wrap;
+    position: relative; 
+    justify-content: space-between;
+    font-family: 'Raleway', sans-serif;
+    width: 100%
+  }
+
+  .responses {
+    margin-top: 20px;
+      padding: 10px;
+      background-color: var(--light-orange); 
+      border: 2px double var(--dark-purple);
+      border-radius: 10px;
+      font-family: "Raleway", sans-serif;
+      font-size: 150%;
+      background-size: 150%;
+}
+
+/* GalleryPage.css */
+.image-gallery-slide img {
+  border: 5px solid var(--light-purple);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery-description {
+  background-color: var(--pastel-purple);
+  border: 2px solid var(--medium-purple);
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.image-gallery-thumbnail {
+  border: 2px solid var(--medium-purple);
+  border-radius: 10px;
+}
+
+
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+
+  
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
